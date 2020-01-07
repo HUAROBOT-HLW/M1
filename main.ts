@@ -399,7 +399,7 @@ namespace HuaRobot_M1_音乐类 {
  ****************************************************************************************************************************************/
 
 //% color="#0000CD" weight=21 icon="\uf185"
-namespace HuaRobot_M1_电机类 {
+//namespace HuaRobot_M1_电机类 {
 
     //% blockId=M1_Fan block="Fan|pin %pin|speed %value"
     //% weight=100
@@ -407,11 +407,11 @@ namespace HuaRobot_M1_电机类 {
     //% color="#0000CD"
     //% value.min=0 value.max=1023
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=9
-    export function Fan(pin: AnalogPin, value: number): void {
+//     export function Fan(pin: AnalogPin, value: number): void {
 
-        pins.analogWritePin(pin, value);
+//         pins.analogWritePin(pin, value);
 
-    }
+//     }
 
     //% blockId=M1_Servo block="Servo|pin %pin|value %value"
     //% weight=100
@@ -419,16 +419,26 @@ namespace HuaRobot_M1_电机类 {
     //% color="#0000CD"
     //% value.min=0 value.max=180
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=9
-    export function Servo(pin: AnalogPin, value: number): void {
+//     export function Servo(pin: AnalogPin, value: number): void {
+
+//         pins.servoWritePin(pin, value);
+
+//     }
+
+// }
+
+//% color="#006400" weight=20 icon="\uf1b9"
+namespace HuaRobot_M1_小车类 {
+	    export function Fan(pin: AnalogPin, value: number): void {
+
+        pins.analogWritePin(pin, value);
+
+    }
+	    export function Servo(pin: AnalogPin, value: number): void {
 
         pins.servoWritePin(pin, value);
 
     }
-
-}
-
-//% color="#006400" weight=20 icon="\uf1b9"
-namespace HuaRobot_M1_小车类 {
 
     const PCA9685_ADD = 0x41
     const MODE1 = 0x00
